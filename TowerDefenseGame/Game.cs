@@ -15,9 +15,9 @@ namespace TowerDefenseGame
             {
                 MapLocation x = new MapLocation(20, 20, map);
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                Console.WriteLine("That map location is not on the map!");
+                Console.WriteLine(ex);
             }
 
             Console.ReadLine();

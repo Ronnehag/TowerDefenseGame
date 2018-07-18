@@ -12,7 +12,7 @@ namespace TowerDefenseGame
         {
             if(!map.OnMap(this)) // If the constructed location is outside the map.
             {
-                throw new Exception();
+                throw new OutOfBoundsException(x + "," + y + " is outside the boundaries of the map.");
             }
         }
     }
