@@ -8,13 +8,13 @@ namespace TowerDefenseGame
 {
     class Point
     {
-        public readonly int x;
-        public readonly int y;
+        public readonly int X;
+        public readonly int Y;
 
-        public Point(int _x, int _y)
+        public Point(int x, int y)
         {
-            x = _x;
-            y = _y;
+            X = x;
+            y = y;
         }
     }
 }

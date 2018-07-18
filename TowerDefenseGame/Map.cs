@@ -9,13 +9,22 @@ namespace TowerDefenseGame
     class Map
     {
         // Can't change values after constructed
-        public readonly int width;
-        public readonly int height;
+        public readonly int Width;
+        public readonly int Height;
 
-        public Map(int _width, int _height)
+        public Map(int width, int height)
         {
-            width = _width;
-            height = _height;
+            Width = width;
+            Height = height;
+        }
+
+        // Checks if the point coordinates are within the declared maps width/height.
+        public bool OnMap(Point point)
+        {
+            bool inBounds = point.X >= 0 && point.X < Width
+                            && point.Y >= 0 && point.Y < Height;
+
+            return inBounds;
         }
 
     }
