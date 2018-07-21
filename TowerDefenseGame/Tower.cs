@@ -8,7 +8,17 @@ namespace TowerDefenseGame
 {
     class Tower
     {
-        private readonly MapLocation _mapLocation;
+        private readonly MapLocation _location;
+        private const int _turretRange = 1;
+        private const int _turretPower = 1;
+        private const double _accuracy = 0.75;
+
+        private static readonly Random _random = new Random();
+
+        public Tower(MapLocation location)
+        {
+            location = _location;
+        }
 
         public Tower(MapLocation location, Path path)
         {
@@ -21,8 +31,14 @@ namespace TowerDefenseGame
                     throw new OutOfBoundsException("Towers can't be placed on a path");
                 }
             }
-            _mapLocation = location;
+            _location = location;
         }
+
+        public bool IsSuccessfulShot()
+        {
+            return _random.NextDouble() < _accuracy;
+        }
+
 
         public void FireOnInvaders(Invader[] invaders)
         {
@@ -30,15 +46,28 @@ namespace TowerDefenseGame
             foreach(var invader in invaders)
             {
                
-                if (invader.IsActive && _mapLocation.InRangeOf(invader.Location, 1))
+                if (invader.IsActive && _location.InRangeOf(invader.Location, _turretRange))
                 {
-                    invader.DecreaseHealth(1);
-                    break;
+                    if(IsSuccessfulShot())
+                    {
+                        invader.DecreaseHealth(_turretPower);
+                        Console.WriteLine("Tower shot hit!");
+
+                        if(invader.IsNeutralized)
+                        {
+                            Console.WriteLine("Targeted invader is neutralized!");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Tower shit missed the invader!");
+                    }
+
                 }
             }
 
         }
-
+        
 
     }
 }

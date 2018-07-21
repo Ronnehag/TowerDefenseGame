@@ -19,10 +19,7 @@ namespace TowerDefenseGame
 
         public MapLocation GetLocationAt(int pathStep)
         {
-            
             return (pathStep < _path.Length) ? _path[pathStep] : null;
-            // if pathStep is less than the length of the array return the step.
-            // Else null.
         }
 
 
