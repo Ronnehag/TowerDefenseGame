@@ -17,7 +17,7 @@ namespace TowerDefenseGame
 
         public Tower(MapLocation location)
         {
-            location = _location;
+            _location = location;
         }
 
         public Tower(MapLocation location, Path path)
@@ -60,7 +60,7 @@ namespace TowerDefenseGame
                     }
                     else
                     {
-                        Console.WriteLine("Tower shit missed the invader!");
+                        Console.WriteLine("Tower shot missed the invader!");
                     }
 
                 }

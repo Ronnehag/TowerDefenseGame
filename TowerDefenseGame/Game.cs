@@ -35,7 +35,7 @@ namespace TowerDefenseGame
                 Tower[] towers = {
                     new Tower(new MapLocation(1, 3, map)),
                     new Tower(new MapLocation(3, 3, map)),
-                    new Tower(new MapLocation(5, 3, map))
+                    new Tower(new MapLocation(5, 3,map))
                 };
 
                 Level levelOne = new Level(invaders)
