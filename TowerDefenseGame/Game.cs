@@ -29,7 +29,8 @@ namespace TowerDefenseGame
                 {
                     new Invader(path),
                     new Invader(path),
-                    new Invader(path)
+                    new Invader(path),
+                    new ShieldedInvader(path)
                 };
 
                 Tower[] towers = {
