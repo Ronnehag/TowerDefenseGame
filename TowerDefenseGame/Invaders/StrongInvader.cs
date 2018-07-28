@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TowerDefenseGame
 {
-    class FastInvader : Invader
+    class StrongInvader : Invader
     {
-        protected override int StepSize { get; } = 2;
+        public override int Health { get; protected set; } = 3;
 
-        public FastInvader(Path path) : base (path)
-        {}
+        public StrongInvader(Path path) : base(path)
+        { }
     }
 }

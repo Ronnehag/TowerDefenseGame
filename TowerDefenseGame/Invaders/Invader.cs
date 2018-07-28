@@ -14,7 +14,7 @@ namespace TowerDefenseGame
         // Proteced only allows access from the Invader class & the subclasses.
         protected virtual int StepSize { get; } = 1;
 
-        public int Health { get; private set; } = 2;
+        public virtual int Health { get; protected set; } = 2;
 
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 

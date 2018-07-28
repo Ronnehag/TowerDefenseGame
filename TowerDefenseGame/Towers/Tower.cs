@@ -8,12 +8,13 @@ namespace TowerDefenseGame
 {
     class Tower
     {
-        private readonly MapLocation _location;
-        private const int _turretRange = 1;
-        private const int _turretPower = 1;
-        private const double _accuracy = 0.75;
+        protected virtual int TurretRange { get; } = 1;
+        protected virtual int TurretPower { get; } = 1;
+        protected virtual double Accuracy { get; } = 0.75;
 
         private static readonly Random _random = new Random();
+
+        private readonly MapLocation _location;
 
         public Tower(MapLocation location)
         {
@@ -36,7 +37,7 @@ namespace TowerDefenseGame
 
         public bool IsSuccessfulShot()
         {
-            return _random.NextDouble() < _accuracy;
+            return _random.NextDouble() < Accuracy;
         }
 
 
@@ -46,11 +47,11 @@ namespace TowerDefenseGame
             foreach(var invader in invaders)
             {
                
-                if (invader.IsActive && _location.InRangeOf(invader.Location, _turretRange))
+                if (invader.IsActive && _location.InRangeOf(invader.Location, TurretRange))
                 {
                     if(IsSuccessfulShot())
                     {
-                        invader.DecreaseHealth(_turretPower);
+                        invader.DecreaseHealth(TurretPower);
                         Console.WriteLine("Tower shot hit!");
 
                         if(invader.IsNeutralized)
