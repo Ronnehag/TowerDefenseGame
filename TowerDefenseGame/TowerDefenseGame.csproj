@@ -49,6 +49,7 @@
     <Compile Include="Invaders\Invader.cs" />
     <Compile Include="Levels.cs" />
     <Compile Include="Invaders\ResurrectingInvader.cs" />
+    <Compile Include="Random.cs" />
     <Compile Include="Towers\EliteTower.cs" />
     <Compile Include="Towers\LongRangeTower.cs" />
     <Compile Include="Map.cs" />

@@ -11,8 +11,7 @@ namespace TowerDefenseGame
         protected virtual int TurretRange { get; } = 1;
         protected virtual int TurretPower { get; } = 1;
         protected virtual double Accuracy { get; } = 0.75;
-
-        private static readonly Random _random = new Random();
+    
 
         private readonly MapLocation _location;
 
@@ -37,7 +36,7 @@ namespace TowerDefenseGame
 
         public bool IsSuccessfulShot()
         {
-            return _random.NextDouble() < Accuracy;
+            return Random.NextDouble() < Accuracy;
         }
 
 
