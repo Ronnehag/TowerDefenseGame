@@ -46,6 +46,7 @@
     <Compile Include="FastInvader.cs" />
     <Compile Include="Invaders\Invader.cs" />
     <Compile Include="Levels.cs" />
+    <Compile Include="Towers\EliteTower.cs" />
     <Compile Include="Towers\LongRangeTower.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="MapLocation.cs" />

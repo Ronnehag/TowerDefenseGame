@@ -56,12 +56,12 @@ namespace TowerDefenseGame
 
                         if(invader.IsNeutralized)
                         {
-                            Console.WriteLine("Targeted invader is neutralized!");
+                            Console.WriteLine("Targeted invader is neutralized at " + invader.Location + "!");
                         }
                     }
                     else
                     {
-                        Console.WriteLine("Tower shot missed the invader!");
+                        Console.WriteLine("Tower shot missed the invader.");
                     }
 
                 }

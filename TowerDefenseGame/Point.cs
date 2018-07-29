@@ -17,7 +17,11 @@ namespace TowerDefenseGame
             Y = y;
         }
 
-        
+        public override string ToString()
+        {
+            return X + "," + Y;
+        }
+
         public int DistanceTo(int x, int y)
         {
             return (int)Math.Sqrt(Math.Pow(X - x, 2) + Math.Pow(Y - y, 2));
@@ -27,6 +31,16 @@ namespace TowerDefenseGame
         public int DistanceTo(Point point)
         {
             return DistanceTo(point.X, point.Y);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if(!(obj is Point)) // This also checks if it's null
+            {
+                return false;
+            }
+            Point that = obj as Point;
+            return X == that.X && Y == that.Y;
         }
     }
 }
