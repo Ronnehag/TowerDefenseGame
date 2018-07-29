@@ -10,6 +10,8 @@ namespace TowerDefenseGame
     {
         private static Random _random = new Random();
 
+        public override int Health { get; protected set; } = 2;
+
         // Passes the Path up to to base class Invader
         public ShieldedInvader(Path path) : base(path)
         {}

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TowerDefenseGame
 {
-    class Invader
+    abstract class Invader : IInvader
     {
         private readonly Path _path;
         private int _pathStep = 0;
@@ -14,7 +14,7 @@ namespace TowerDefenseGame
         // Proteced only allows access from the Invader class & the subclasses.
         protected virtual int StepSize { get; } = 1;
 
-        public virtual int Health { get; protected set; } = 2;
+        public abstract int Health { get; protected set; }
 
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 

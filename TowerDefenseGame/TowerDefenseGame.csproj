@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions.cs" />
-    <Compile Include="FastInvader.cs" />
+    <Compile Include="IInvader.cs" />
+    <Compile Include="Invaders\FastInvader.cs" />
+    <Compile Include="Invaders\BasicInvader.cs" />
     <Compile Include="Invaders\Invader.cs" />
     <Compile Include="Levels.cs" />
     <Compile Include="Towers\EliteTower.cs" />

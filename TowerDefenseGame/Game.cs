@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TowerDefenseGame.Invaders;
 
 namespace TowerDefenseGame
 {
@@ -28,8 +29,8 @@ namespace TowerDefenseGame
 
                 Invader[] invaders =
                 {
-                    new Invader(path),
-                    new Invader(path),
+                    new BasicInvader(path),
+                    new BasicInvader(path),
                     new StrongInvader(path),
                     new FastInvader(path),
                     new ShieldedInvader(path)
