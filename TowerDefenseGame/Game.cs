@@ -26,15 +26,6 @@ namespace TowerDefenseGame
                     });
 
 
-                MapLocation newLocation = new MapLocation(0, 2, map);
-
-                if(path.IsOnPath(newLocation))
-                {
-                    Console.WriteLine(newLocation + " is on the path.");
-                    return;
-                }
-
-
                 Invader[] invaders =
                 {
                     new Invader(path),
