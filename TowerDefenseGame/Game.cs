@@ -27,10 +27,10 @@ namespace TowerDefenseGame
                     });
 
 
-                Invader[] invaders =
+                IInvader[] invaders =
                 {
                     new BasicInvader(path),
-                    new BasicInvader(path),
+                    new ResurrectingInvader(path),
                     new StrongInvader(path),
                     new FastInvader(path),
                     new ShieldedInvader(path)
