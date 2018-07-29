@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace TowerDefenseGame
 {
-    interface IInvader
+    interface IMappable
     {
         MapLocation Location { get; }
+    }
 
+    interface IMoveable
+    {
+        void Move();
+    }
+
+    interface IInvader : IMappable, IMoveable
+    {
+       
         int Health { get; }
 
         bool HasScored { get; }
@@ -17,8 +26,6 @@ namespace TowerDefenseGame
         bool IsNeutralized { get; }
 
         bool IsActive { get; }
-
-        void Move();
 
         void DecreaseHealth(int factor);
     }
